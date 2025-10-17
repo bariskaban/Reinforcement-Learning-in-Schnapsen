@@ -1,0 +1,8 @@
+Execution instructions:
+
+1 - Running the main will start the execution on which the learning bot will play against one of the opponent bots before training, and winrate before its training  against that opponent bot will be outputted.
+2 - Than, it will start training by playing with that same opponent bot.
+3 - Than they will play again and the winrate against that bot after its training will be outputted.
+5 - Than its memory will reset.
+4 - Learning bot is going to do that with all of the opponent bots one by one in a regular game environment.
+5 - Once it is finished, it will repeat step 4 but with 24 schnapsen game. 

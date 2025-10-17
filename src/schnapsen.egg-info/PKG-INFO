@@ -1,0 +1,163 @@
+Metadata-Version: 2.2
+Name: schnapsen
+Version: 0.0.5
+Summary: A platform for coding and running card playing bots
+Home-page: https://github.com/intelligent-systems-course/
+Maintainer: Michael Cochez
+Maintainer-email: nospam@nospam.com
+Project-URL: Bug Tracker, https://github.com/intelligent-systems-course/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Games/Entertainment
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: class_resolver>=0.0.10
+Requires-Dist: click==8.1.8
+Requires-Dist: scikit-learn==1.6.0
+Requires-Dist: joblib==1.4.2
+Requires-Dist: flask==2.3.3
+Requires-Dist: Werkzeug==3.0.1
+Provides-Extra: test
+Requires-Dist: flake8; extra == "test"
+Requires-Dist: mypy; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: unittest-templates; extra == "test"
+Provides-Extra: dev
+Requires-Dist: ipykernel; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: pdoc; extra == "doc"
+
+# Schnapsen platform - Project Intelligent Systems 2024-2025
+
+## Getting started
+
+This is a platform for the schnapsen card game. To get to know the concept of the game, please visit
+[this web page](https://www.pagat.com/marriage/schnaps.html).
+
+
+To use the platform, your python version must be at least 3.10.
+The code has been tested with python 3.13, let us know if you encounter issues.
+
+We strongly suggest installing conda (or pip) and using an environment.
+
+### Getting an environment ###
+
+An easy way to get that is using virtual environments. We suggest you install [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) to manage them.
+Then, you can use conda to create a new environment by running
+```sh
+conda create --name project_is python=3.10
+```
+With this environment created, you can start it
+```
+conda activate project_is
+```
+Inside this environment you can install the dependencies as instructed below. Some IDEs also support the use of environments, and can help you install dependencies. 
+
+### getting the platform ###
+
+After you have created the environment, make sure it is enabled.
+Then, clone the repository, go into the folder and install the schnapsen package and its dependencies in editable mode by running:
+
+```sh
+pip install -e .
+```
+
+To run the tests, run:
+
+```sh
+pip install -e '.[test]'  # on Linux / MacOS
+pip install -e ".[test]"  # on Windows
+
+pytest ./tests
+```
+
+If the above fails, try deactivating your environment and activating it again.
+Then retry installing the dependencies.
+
+## Running the CLI
+
+After intalling, you can try the provided command line interface examples.
+Most examples are bots playing against each other; read the code for details.
+
+To run the CLI, run:
+
+```sh
+python executables/cli.py
+```
+This will list the available commands.
+
+For example, if you want try a RandBot play against another RandBot, type
+`python executables/cli.py random-game`.
+
+
+## Running the GUI
+
+The graphical user interface (GUI) lets you play visually against a bot (e.g., You vs. RandBot).
+
+To start the GUI, run:
+
+```sh
+python executables/server.py
+```
+
+Now, open your webbrowser and type in the server address (i.e., http://127.0.0.1:8080). 
+By default, you are playing against RandBot. You can modify the code in executables/server.py to play against other bots.
+
+## Implementing more bots
+
+You will find bot examples in the [`src/schnapsen/bots`](./src/schnapsen/bots) folder.
+You can look at the example_bot.py file for various methods provided to your bot.
+
+The documentation for the platform is hosted at https://intelligent-systems-course.github.io/schnapsen/
+
+
+## Troubleshooting
+
+
+
+### Run the right python ###
+
+If you install conda and create an environment, you can run python by just running the `python` command.
+However, often your system also provides a python version. 
+To know which python is running, use
+```sh
+which python    # on linux
+where python    # on windows (untested)
+``` 
+Now, you want to look at the output and make sure that this executable is inside the anaconda folder and not where your system stores its executables.
+
+
+
+
+<!--
+
+Most of the time, when you read Github python repo READMEs, they won't tell you how to do things in detail, but simply tell you things like run `python bar`, run `pip install foo`, etc. All of these imply that you are running things in an isolated python environment. Often times this is easily done by creating virtual environments (e.g., venv, conda, etc.), where you know exactly what `python`, `pip`, and other modules you are running. If you are not familiar with it and still want to proceed on your current machine, especially on Windows, below are some tips.
+
+1. **Be super specific with your python binary.**
+
+   Don't just run `python bar` but do more like `python3.9 bar`. If you just run `python bar`, it's hard to know which python binary file your system is running.
+
+2. **Be super specific with the modules (e.g., pip, pytest).**
+
+   Don't just run `pip install foo` but do more like `python3.9 -m pip install foo`. Again, if you just run `pip install foo`, we don't know exactly which `pip` your system will run. `python3.9 -m pip install foo` specifies that you want your `python3.9` to run the module (i.e., `-m`) `pip` to do something. The same goes for `python3.9 -m pytest ./tests`, instead of `pytest ./tests`.
+
+Things can be messy if you have multiple python3.9 versions (e.g., `python3.9.1`, `python3.9.10`, etc.). Things can get even more messy when your python binary can't be run as `python3.9` but more like `py3.9` or something. Good luck!
+-->
+<!--
+
+## Documentation ##
+
+The code is documented using reStructuredText. You can either read the documentation along the code, or generate a more suer friendly version.
+A pregenerated version of the documentation can be found int he doc folder. It can be regenerated by runnign the following in the root of the repository.
+
+```bash
+pip install pdoc
+pdoc --html src/schnapsen executables/ -o doc/
+```
+
+if above doesn't work, try pdoc3, instead of pdoc
+>
