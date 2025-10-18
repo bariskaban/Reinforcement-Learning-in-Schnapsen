@@ -26,28 +26,6 @@ Statistical analyses using *t-tests* and *Wilcoxon signed-rank tests* confirmed 
 - Python **≥ 3.10** (tested on Python 3.13)  
 - Conda or venv recommended for environment management  
 
-### Environment Setup  
-```bash
-conda create --name schnapsen_rl python=3.10
-conda activate schnapsen_rl`
-
-### Clone and Install
-git clone https://github.com/<your-username>/Reinforcement-Learning-in-Schnapsen.git
-cd Reinforcement-Learning-in-Schnapsen
-pip install -e .`
-
-### Run Tests 
-pip install -e ".[test]"
-pytest ./tests`
-
-### Usage - Command-Line Interface (CLI)
-## Run AI bots against each other:
-python executables/cli.py random-game`
-
-## Graphical User Interface (GUI)
-## Play interactively via the browser:
-python executables/server.py`
-
 ## Project Structure
 Reinforcement-Learning-in-Schnapsen/
 │
@@ -84,15 +62,40 @@ Reinforcement-Learning-in-Schnapsen/
 ├── setup.cfg
 └── setup.py
 
-## Example of training the RL bot against RandBot and testing post-training performance:
-
-python train_rl_bot.py --opponent randbot --games 10000 --train 3000`
+---
 
 ## Research Context 
 Developed as part of Project Intelligent Systems at Vrije Universiteit Amsterdam, this work explores reinforcement learning scalability in games with partial and full information.
 The agent demonstrates consistent adaptability when faced with increased state and action spaces, highlighting the robustness of Q-learning in uncertain environments.
 
+---
+
 ## License - This project is distributed for educational and research purposes.
 
 Author: Barış Kaban / Cem Saygıvar
 Artificial Intelligence BSc, Vrije Universiteit Amsterdam
+
+---
+## Environment Setup
+```bash
+# Create and activate environment
+conda create --name schnapsen_rl python=3.10
+conda activate schnapsen_rl
+
+# Clone and install
+git clone https://github.com/bariskaban/Reinforcement-Learning-in-Schnapsen.git
+cd Reinforcement-Learning-in-Schnapsen
+pip install -e .
+
+# Run tests
+pip install -e ".[test]"
+pytest ./tests
+
+# Command-Line Interface (CLI)
+python executables/cli.py random-game
+
+# Graphical User Interface (GUI)
+python executables/server.py
+
+# Example: training RL bot vs RandBot
+python train_rl_bot.py --opponent randbot --games 10000 --train 3000
