@@ -2,6 +2,8 @@
 
 A neural network-based Q-learning agent for the strategic card game Schnapsen, featuring scalability experiments with extended deck configurations and comprehensive bot comparisons.
 
+> 📄 A full research report is included in this repository: [`project_report.pdf`](./project_report.pdf)
+
 ---
 
 ## 👥 Authors
