@@ -12,8 +12,6 @@ A neural network-based Q-learning agent for the strategic card game Schnapsen, f
 *Artificial Intelligence BSc*  
 *Vrije Universiteit Amsterdam*
 
-**Course**: Project Intelligent Systems 2024-2025
-
 ---
 
 ## 📋 Table of Contents
@@ -275,10 +273,10 @@ Reinforcement-Learning-in-Schnapsen/
 │   ├── test_repr.py
 │   └── test_schnapsen_integration.py
 │
-├── models/                         # Saved model checkpoints
-├── results/                        # Evaluation results and logs
+├── Executing_instructions.txt
 ├── LICENSE
 ├── README.md
+├── project_report.pdf
 ├── pyproject.toml
 ├── setup.cfg
 └── setup.py
@@ -433,7 +431,7 @@ All rights reserved by the authors. See [LICENSE](LICENSE) for details.
 
 ## 📧 Contact
 
-For questions, suggestions, or collaboration opportunities, please reach out to the authors through the Vrije Universiteit Amsterdam AI program.
+For questions, suggestions, or collaboration opportunities, please reach out to the authors.
 
 ---
 
