@@ -2,11 +2,11 @@
 
 A neural network-based Q-learning agent for the strategic card game Schnapsen, featuring scalability experiments with extended deck configurations and comprehensive bot comparisons.
 
-> 📄 A full research report is included in this repository: [`project_report.pdf`](./project_report.pdf)
+> A full research report is included in this repository: [`project_report.pdf`](./project_report.pdf)
 
 ---
 
-## 👥 Authors
+## Authors
 
 **Barış Kaban** | **Cem Saygıvar**  
 *Artificial Intelligence BSc*  
@@ -14,7 +14,7 @@ A neural network-based Q-learning agent for the strategic card game Schnapsen, f
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Key Features](#key-features)
@@ -31,7 +31,7 @@ A neural network-based Q-learning agent for the strategic card game Schnapsen, f
 
 ---
 
-## 🎯 Overview
+## Overview
 
 This project implements a **reinforcement learning agent** capable of playing Schnapsen, a classic two-player trick-taking card game. The system extends the standard 20-card version to a **24-card environment** to investigate learning scalability and adaptability in increasingly complex state spaces.
 
@@ -53,7 +53,7 @@ This project explores whether Q-learning with neural network approximation can:
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 ### Reinforcement Learning
 
@@ -85,7 +85,7 @@ This project explores whether Q-learning with neural network approximation can:
 
 ---
 
-## 🧠 Technical Approach
+## Technical Approach
 
 ### Q-Learning with Neural Networks
 
@@ -121,7 +121,7 @@ The state space includes:
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 
@@ -169,7 +169,7 @@ python executables/cli.py random-game
 
 ---
 
-## 💻 Usage
+## Usage
 
 ### Command-Line Interface (CLI)
 
@@ -237,7 +237,7 @@ python executables/server.py
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Reinforcement-Learning-in-Schnapsen/
@@ -284,7 +284,7 @@ Reinforcement-Learning-in-Schnapsen/
 
 ---
 
-## 📊 Research Findings
+## Research Findings
 
 ### Performance Summary
 
@@ -317,36 +317,36 @@ The Q-learning agent achieved competitive performance against diverse opponents:
 
 ---
 
-## 🤖 Bot Opponents
+## Bot Opponents
 
 ### RandBot
 **Strategy**: Random action selection from legal moves  
 **Purpose**: Baseline for minimum expected performance  
-**Difficulty**: ⭐☆☆☆☆
+**Difficulty**: 1/5
 
 ### BullyBot
 **Strategy**: Aggressive rule-based play, prioritizing high-value cards  
 **Purpose**: Test against deterministic greedy strategies  
-**Difficulty**: ⭐⭐☆☆☆
+**Difficulty**: 2/5
 
 ### MinimaxBot
 **Strategy**: Minimax search with perfect information assumption  
 **Purpose**: Evaluate against optimal single-step planning  
-**Difficulty**: ⭐⭐⭐☆☆
+**Difficulty**: 3/5
 
 ### AlphaBetaBot
 **Strategy**: Optimized minimax with alpha-beta pruning  
 **Purpose**: Test against efficient search algorithms  
-**Difficulty**: ⭐⭐⭐⭐☆
+**Difficulty**: 4/5
 
 ### RdeepBot
 **Strategy**: Hybrid approach combining heuristics and search  
 **Purpose**: Benchmark against advanced bot design  
-**Difficulty**: ⭐⭐⭐⭐⭐
+**Difficulty**: 5/5
 
 ---
 
-## 🧪 Testing & Evaluation
+## Testing & Evaluation
 
 ### Unit Tests
 
@@ -387,7 +387,7 @@ result = wilcoxon_test(model_a_scores, model_b_scores)
 
 ---
 
-## 🔮 Future Work
+## Future Work
 
 ### Short-term Improvements
 
@@ -413,7 +413,7 @@ result = wilcoxon_test(model_a_scores, model_b_scores)
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 This project was developed as part of the **Project Intelligent Systems** course at **Vrije Universiteit Amsterdam**. We thank the course instructors for their guidance and feedback throughout the development process.
 
@@ -421,21 +421,21 @@ Special thanks to the open-source community for tools and libraries that made th
 
 ---
 
-## 📝 License
+## License
 
 This project is distributed for **educational and research purposes**.
 
-All rights reserved by the authors. See [LICENSE](LICENSE) for details.
+See [LICENSE](LICENSE) for details.
 
 ---
 
-## 📧 Contact
+## Contact
 
-For questions, suggestions, or collaboration opportunities, please reach out to the authors.
+For questions, suggestions or collaboration opportunities, please reach out to the authors.
 
 ---
 
-## 🔗 References
+## References
 
 - Sutton, R. S., & Barto, A. G. (2018). *Reinforcement Learning: An Introduction* (2nd ed.)
 - Mnih, V., et al. (2015). Human-level control through deep reinforcement learning. *Nature*
